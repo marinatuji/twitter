@@ -3,18 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>Twitter</title>
-	<link ref="stylesheet" src="style.js">
+	<link rel="stylesheet" href="style.css">
 </head>
 <header>
 	<h1>TWITTER</h1>
 </header>
 <body>
 	<section>
-		<form class="input-twitter" name=inputTwitter onsubmit="sendMessage(event,this)">
-			<textarea type="text" name="messageWrited" required placeholder="Twitte aqui sua mensagem"></textarea>></textarea>
-			<submit>Twittar</submit>
+		<form class="input-twitter" name=inputTwitter onsubmit="captionMessage(event, this)">
+			<textarea id="input-textarea" type="text" name="messageWrited" rows="5" cols="50" required placeholder="O que está acontecendo?"></textarea>
+			<input type="submit" name="submitTweet" value="Twittar">
 		</form>
 	</section>
+	<p id="display"></p>
 	<script src="twitter.js"></script>
 </body>
 </html>
