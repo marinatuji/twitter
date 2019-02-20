@@ -1,12 +1,25 @@
 body {
-    background-color: #0066ff;
+  background-color: #0099ff;
 }
 
 header {
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+  color: white;
+  font-family: 'Montserrat';
 }
 
-p {
-    color:white;
+.input-twitter {
+	display: inline-flex;
 }
+
+#display {
+	color:white;
+	background-color: grey;
+	size: 30%;
+}
+
+#regressive-counter {
+	color: antiquewhite;
+	size: 15px;
+}
+
+

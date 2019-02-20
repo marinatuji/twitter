@@ -3,19 +3,27 @@
 <head>
 	<meta charset="utf-8">
 	<title>Twitter</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <header>
 	<h1>TWITTER</h1>
 </header>
 <body>
-	<section>
-		<form class="input-twitter" name=inputTwitter onsubmit="captionMessage(event, this)">
-			<textarea id="input-textarea" type="text" name="messageWrited" rows="5" cols="50" required placeholder="O que está acontecendo?"></textarea>
-			<input type="submit" name="submitTweet" value="Twittar">
+	<section class='input-twitter'>
+		<form name='inputTwitter' onsubmit="captureMessage(event, this)">
+			<fieldset>
+				<textarea id='input-textarea' type='text' onkeyup='enableButton()' oninput='countChars(this)'
+					name='messageWrited' maxlength='140' rows='5' cols='50' required
+					placeholder='O que está acontecendo?'></textarea>
+				<input type='submit' disabled='true' name='submitTweet' value='Twittar'>
+				<input id='regressive-counter' type='number' name='regressiveCounter' inputEvent='counterBehavior()'>
+			</fieldset>
 		</form>
 	</section>
-	<p id="display"></p>
-	<script src="twitter.js"></script>
+	<section class='messages-tweeted'>
+		<p id='display' type=text name='displayTweet'></p>
+	</section>
+	<script src='twitter.js'></script>
 </body>
 </html>

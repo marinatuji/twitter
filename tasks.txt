@@ -1,13 +1,13 @@
 Tasks (TODO)
 
-infos: https://marinatuji.github.io/twitter/
+github pages: https://marinatuji.github.io/twitter/
 
 1.1. Crie um formulário que permita inserir um texto e um botão para "twittar". ok
 1.2. Adicione um evento de click ao botão ou de submit no formulário. ok
 1.3. No evento, obter o texto. ok
-1.4. Adicione o texto ao HTML.
-2.1. Não inserir texto vazio (desativar o botão "twittar").
-2.2. Conte o número de caracteres de forma regressiva.
+1.4. Adicione o texto ao HTML. ok
+2.1. Não inserir texto vazio (desativar o botão "twittar"). ok
+2.2. Conte o número de caracteres de forma regressiva. ok
 3.1. Se você passar os 140 caracteres, desative o botão.
 3.2. Se você passar os 120 caracteres, mostre o contador com outra cor.
 3.3. Se você passar os 130 caracteres, mostre o contador com outra cor.
