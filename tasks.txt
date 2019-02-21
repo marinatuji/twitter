@@ -12,11 +12,11 @@ github pages: https://marinatuji.github.io/twitter/
 3.2. Se você passar os 120 caracteres, mostre o contador com outra cor. ok
 3.3. Se você passar os 130 caracteres, mostre o contador com outra cor.ok
 3.4. Se você passar os 140 caracteres, mostre o contador em negativo. ok
-4.1. Ao pressionar enter (/n) aumente a área de texto de acordo com o tamanho do texto.
+4.1. Ao pressionar enter (/n) aumente a área de texto de acordo com o tamanho do texto. ok
 
 5.1. (Hacker Edition)
 Se o número de caracteres digitados (sem dar um "enter") exceder o tamanho da área de texto por padrão,
-mais uma linha deverá ser adicionada para que a rolagem não apareça. (Se aplicável)
+mais uma linha deverá ser adicionada para que a rolagem não apareça. (Se aplicável) ok
 6.1. (Hacker Edition)
 Adicione a hora em que o tweet foi publicado no formato de 24 horas hh:mm.
 

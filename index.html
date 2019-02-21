@@ -16,13 +16,12 @@
 				<textarea id='input-textarea' type='text' onkeyup='enableButton()' oninput='countChars(this)'
 					name='messageWrited' maxlength='200' rows='5' cols='50' required
 					placeholder='O que está acontecendo?'></textarea>
-				<input type='submit' disabled='true' name='submitTweet' value='Twittar'>
+				<input id='button-twittar' type='submit' disabled='true' name='submitTweet' value='Twittar'>
 				<input id='regressive-counter' type='number' name='regressiveCounter'>
 			</fieldset>
 		</form>
 	</section>
-	<section class='messages-tweeted'>
-		<p id='display' type=text name='displayTweet'></p>
+	<section id='messages-tweeted'>
 	</section>
 	<script src='twitter.js'></script>
 </body>

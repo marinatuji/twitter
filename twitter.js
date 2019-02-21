@@ -1,11 +1,9 @@
 function captureMessage(event, form) {
 	event.preventDefault();
 	let messageWrited = form.messageWrited.value;
-	document.getElementById('display').textContent = messageWrited;
 	disableButton();
 	cleanContent();
-	createTweets();
-	return messageWrited;
+	createTweets(messageWrited);
 }
 
 function cleanContent() {
@@ -20,25 +18,26 @@ function enableButton() {
 	document.getElementsByName('submitTweet')[0].disabled = false;
 }
 
-function createTweets() {
-	document.getElementsByName('submitTweet')[0].disabled = false;
-	let i = 0;
-	let tweet = document.createElement('p');
-	document.getElementsByTagName('p')[i];
-	i++;
+function createTweets(messageWrited) {
+	let sectionTweets = document.getElementById('messages-tweeted');
+	let tweet = document.createElement('article');
+	let date = '29/12/1986';
+	let textTweet = document.createTextNode(`${date} - ${messageWrited}`);
+	tweet.appendChild(textTweet);
+	sectionTweets.appendChild(tweet);
 }
 
 function countChars(event) {
-	const messageChars = event.value.length;//tamnho da minha msg
+	const messageChars = event.value.length;
 	const messageSize = 140 - messageChars;
 	const counterElement = document.getElementById('regressive-counter');
 	counterElement.value = messageSize;
 	counterBehavior(counterElement);
-	return messageSize;
+	resize();
 }
 
 function counterBehavior(element) {
-	const counterValue = parseInt(element.value);
+	const counterValue = parseInt(element.value);//contador regressivo
 	if (counterValue < 0) {
 		disableButton();
 		element.style.color = 'grey';
@@ -49,4 +48,10 @@ function counterBehavior(element) {
 	} else if (counterValue > 20 && counterValue <= 140) {
 		element.style.color = 'black';
 	}
+}
+
+function resize() {
+	let resizeTextarea = document.getElementById('input-textarea');
+   resizeTextarea.style.height = 'auto';
+   resizeTextarea.style.height = resizeTextarea.scrollHeight + "px";
 }
