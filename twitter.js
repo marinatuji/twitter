@@ -21,7 +21,7 @@ function enableButton() {
 function createTweets(messageWrited) {
 	let sectionTweets = document.getElementById('messages-tweeted');
 	let tweet = document.createElement('article');
-	let date = '29/12/1986';
+	let date = getDate();
 	let textTweet = document.createTextNode(`${date} - ${messageWrited}`);
 	tweet.appendChild(textTweet);
 	sectionTweets.appendChild(tweet);
@@ -52,6 +52,12 @@ function counterBehavior(element) {
 
 function resize() {
 	let resizeTextarea = document.getElementById('input-textarea');
-   resizeTextarea.style.height = 'auto';
-   resizeTextarea.style.height = resizeTextarea.scrollHeight + "px";
+	resizeTextarea.style.height = 'auto';
+	resizeTextarea.style.height = resizeTextarea.scrollHeight + "px";
+}
+
+function getDate() {
+	const dateTime = new Date();
+	const tweetDate = dateTime.getDay() + '/' + (dateTime.getMonth() + 1) + '/' + dateTime.getFullYear() + '  ' + dateTime.getHours() + ':' + dateTime.getMinutes();
+	return tweetDate;
 }
