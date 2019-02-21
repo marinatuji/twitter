@@ -8,6 +8,7 @@ function captureMessage(event, form) {
 
 function cleanContent() {
 	document.getElementById('input-textarea').value = '';
+	document.getElementById('regressive-counter').value = '';
 }
 
 function disableButton() {
@@ -15,7 +16,10 @@ function disableButton() {
 }
 
 function enableButton() {
-	document.getElementsByName('submitTweet')[0].disabled = false;
+	const counterValue = parseInt(document.getElementById('regressive-counter').value);
+	if (counterValue >= 0) {
+		document.getElementsByName('submitTweet')[0].disabled = false;
+	}
 }
 
 function createTweets(messageWrited) {
@@ -24,7 +28,7 @@ function createTweets(messageWrited) {
 	let date = getDate();
 	let textTweet = document.createTextNode(`${date} - ${messageWrited}`);
 	tweet.appendChild(textTweet);
-	sectionTweets.appendChild(tweet);
+	sectionTweets.appendChild(tweet); //tentar insert.before
 }
 
 function countChars(event) {
@@ -56,7 +60,7 @@ function resize() {
 	resizeTextarea.style.height = resizeTextarea.scrollHeight + "px";
 }
 
-function getDate() {
+function getDate(	) {
 	const dateTime = new Date();
 	const tweetDate = dateTime.getDay() + '/' + (dateTime.getMonth() + 1) + '/' + dateTime.getFullYear() + '  ' + dateTime.getHours() + ':' + dateTime.getMinutes();
 	return tweetDate;
