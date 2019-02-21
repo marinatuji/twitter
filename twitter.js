@@ -22,14 +22,17 @@ function enableButton() {
 	}
 }
 
+//.replace(/\r?\n/g, '<br />') //word-wrap: break-word
 function createTweets(messageWrited) {
 	let sectionTweets = document.getElementById('messages-tweeted');
 	let tweet = document.createElement('article');
 	let date = getDate();
+	//let formatMessage = messageWrited.replace(/\r?\n/g, '<br />');
 	let textTweet = document.createTextNode(`${date} - ${messageWrited}`);
 	tweet.appendChild(textTweet);
-	sectionTweets.appendChild(tweet); //tentar insert.before
+	sectionTweets.appendChild(tweet);
 }
+//
 
 function countChars(event) {
 	const messageChars = event.value.length;
@@ -62,6 +65,6 @@ function resize() {
 
 function getDate(	) {
 	const dateTime = new Date();
-	const tweetDate = dateTime.getDay() + '/' + (dateTime.getMonth() + 1) + '/' + dateTime.getFullYear() + '  ' + dateTime.getHours() + ':' + dateTime.getMinutes();
+	const tweetDate = dateTime.getDate() + '/' + (dateTime.getMonth() + 1) + '/' + dateTime.getFullYear() + '  ' + dateTime.getHours() + ':' + dateTime.getMinutes();
 	return tweetDate;
 }
