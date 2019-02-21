@@ -8,10 +8,10 @@ github pages: https://marinatuji.github.io/twitter/
 1.4. Adicione o texto ao HTML. ok
 2.1. Não inserir texto vazio (desativar o botão "twittar"). ok
 2.2. Conte o número de caracteres de forma regressiva. ok
-3.1. Se você passar os 140 caracteres, desative o botão.
-3.2. Se você passar os 120 caracteres, mostre o contador com outra cor.
-3.3. Se você passar os 130 caracteres, mostre o contador com outra cor.
-3.4. Se você passar os 140 caracteres, mostre o contador em negativo.
+3.1. Se você passar os 140 caracteres, desative o botão. ok
+3.2. Se você passar os 120 caracteres, mostre o contador com outra cor. ok
+3.3. Se você passar os 130 caracteres, mostre o contador com outra cor.ok
+3.4. Se você passar os 140 caracteres, mostre o contador em negativo. ok
 4.1. Ao pressionar enter (/n) aumente a área de texto de acordo com o tamanho do texto.
 
 5.1. (Hacker Edition)

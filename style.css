@@ -7,8 +7,13 @@ header {
   font-family: 'Montserrat';
 }
 
+fieldset {
+	display: flex;
+	width: 20%;
+}
+
 .input-twitter {
-	display: inline-flex;
+	align-items: flex-end;
 }
 
 #display {
@@ -18,8 +23,8 @@ header {
 }
 
 #regressive-counter {
-	color: antiquewhite;
-	size: 15px;
+	background-color: antiquewhite;
+	width: 40px;
+	height: 20px;
+	color: black;
 }
-
-

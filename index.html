@@ -14,10 +14,10 @@
 		<form name='inputTwitter' onsubmit="captureMessage(event, this)">
 			<fieldset>
 				<textarea id='input-textarea' type='text' onkeyup='enableButton()' oninput='countChars(this)'
-					name='messageWrited' maxlength='140' rows='5' cols='50' required
+					name='messageWrited' maxlength='200' rows='5' cols='50' required
 					placeholder='O que está acontecendo?'></textarea>
 				<input type='submit' disabled='true' name='submitTweet' value='Twittar'>
-				<input id='regressive-counter' type='number' name='regressiveCounter' inputEvent='counterBehavior()'>
+				<input id='regressive-counter' type='number' name='regressiveCounter'>
 			</fieldset>
 		</form>
 	</section>
